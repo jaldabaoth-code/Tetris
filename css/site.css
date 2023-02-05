@@ -1,0 +1,92 @@
+html, body {
+    background-color: #212121;
+    color: #FFFFFF;
+    font-family: arial, helvetica;
+}
+
+h1 {
+  text-align: center;
+}
+
+#tetris {
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 26em;
+}
+
+#grid {
+    float: left;
+}
+
+#grid table, #next table {
+    border-bottom-color: #999999;
+    border-bottom-style: solid;
+    border-bottom-width: 0.2em;
+    border-image: initial;
+    border-left-color: #999999;
+    border-left-style: solid;
+    border-left-width: 0.2em;
+    border-right-color: #999999;
+    border-right-style: solid;
+    border-right-width: 0.2em;
+    border-top-color: #999999;
+    border-top-style: solid;
+    border-top-width: 0.2em;
+}
+
+#grid td, #next td {
+    height: 1.2em;
+    width: 1.2em;
+}
+
+#next {
+    float: right;
+    margin-bottom: 1em;
+}
+
+#stats {
+    clear: right;
+    float: right;
+    margin-bottom: 1em;
+}
+
+#stats div {
+    font-size: 120%;
+    text-align: right;
+    width: 7em;
+}
+
+#cmd {
+    clear: right;
+    float: right;
+    font-size: 120%;
+    text-align: right;
+    width: 7em;
+}
+
+#cmd input {
+    margin-bottom: 1em;
+}
+
+#info {
+    clear: right;
+    float: right;
+    font-size: 80%;
+    text-align: right;
+    width: 7em;
+}
+
+#info input {
+    text-align: center;
+    width: 1.5em;
+}
+
+#src {
+    color: #FFFFFF;
+    font-family: arial, helvetica;
+    font-size: 80%;
+}
