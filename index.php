@@ -3,9 +3,9 @@
    <head>
         <title>Tuto - Demo jQuery</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
-		<link href="./css/site.css" title="Style" type="text/css" media="screen" rel="stylesheet">
-		<script src="./js/jquery.js" type="text/javascript"></script>
-		<script src="./js/main.js" type="text/javascript"></script>
+		<link href="./assets/css/style.css" title="Style" type="text/css" media="screen" rel="stylesheet">
+		<script src="./assets/js/jquery.js" type="text/javascript"></script>
+		<script src="./assets/js/main.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<h1>Tuto - Tetris With jQuery</h1>

@@ -1,7 +1,6 @@
 var tetris = {
 	// Shape colors
-	colors: ['#eaeaea','#ff6600','#eec900','#0000ff',
-		'#cc00ff','#00ff00','#66ccff','#ff0000'],
+	colors: ['#eaeaea','#ff6600','#eec900','#0000ff', '#cc00ff','#00ff00','#66ccff','#ff0000'],
 
 	// Starting line for each shape
 	startAt: [0, -1, -1, -1, 0, -1, -1, 0],
@@ -38,7 +37,8 @@ var tetris = {
 		[[[0,0,0,0],[0,1,1,0],[1,1,0,0],[0,0,0,0]],
 		 [[0,1,0,0],[0,1,1,0],[0,0,1,0],[0,0,0,0]]],
 		// O
-		[[[0,1,1,0],[0,1,1,0],[0,0,0,0],[0,0,0,0]]]],
+		[[[0,1,1,0],[0,1,1,0],[0,0,0,0],[0,0,0,0]]]
+	],
 
 	// Pre-load elements of the grid
 	init: function() {
@@ -52,7 +52,6 @@ var tetris = {
 			}
 		}
 		tetris.bound = $.browser == 'msie' ? '#tetris' : window;
-
 	},
 
 	// Initialize to start the game
@@ -72,7 +71,8 @@ var tetris = {
 			[1,0,0,0,0,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,0,0,0,0,1],
 			[1,0,0,0,0,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,0,0,0,0,1],
 			[1,0,0,0,0,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,0,0,0,0,1],
-			[1,1,1,1,1,1,1,1,1,1,1,1]];
+			[1,1,1,1,1,1,1,1,1,1,1,1]
+		];
 		$('#grid td').css('backgroundColor', tetris.colors[0]);
 		$('#stop').css('disabled', false);
 		$(tetris.bound).keypress(tetris.key);
@@ -173,8 +173,7 @@ var tetris = {
 		var i, j;
 		for (i = 0; i < 4; ++i) {
 			for (j = 0; j < 4; ++j) {
-				if (tetris.curShape[r][j][i] && tetris.grid[y + j] &&
-						tetris.grid[y + j][x + i]) {
+				if (tetris.curShape[r][j][i] && tetris.grid[y + j] && tetris.grid[y + j][x + i]) {
 					return false;
 				}
 			}
@@ -224,8 +223,7 @@ var tetris = {
 		// mark the grid
 		for (i = 0; i < 4; ++i) {
 			for (j = 0; j < 4; ++j) {
-				if (tetris.curShape[tetris.r][j][i] &&
-						tetris.grid[tetris.y + j]) {
+				if (tetris.curShape[tetris.r][j][i] && tetris.grid[tetris.y + j]) {
 					tetris.grid[tetris.y + j][tetris.x + i] = tetris.cur;
 				}
 			}
@@ -272,8 +270,7 @@ var tetris = {
 		// redraw the grid
 		for (i = 0; i < 18; ++i) {
 			for (j = 1; j < 11; ++j) {
-				tetris.cells[i][j].css('backgroundColor',
-					tetris.colors[tetris.grid[i][j]]);
+				tetris.cells[i][j].css('backgroundColor', tetris.colors[tetris.grid[i][j]]);
 			}
 		}
 		tetris.refresh();
@@ -306,7 +303,6 @@ var tetris = {
 		tetris.y0 = tetris.y;
 		tetris.r0 = tetris.r;
 	}
-
 };
 
 // Everything starts here
